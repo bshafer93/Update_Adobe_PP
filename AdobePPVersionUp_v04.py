@@ -116,15 +116,7 @@ def insert_0(string, index):
     return string[:index] + '0' + string[index:]
 
 
-#I hate zipping stuff
-def unzip_file(projectFile):
-	zfiledata = StringIO(zfile.read(projectFile))
-	with zipfile.ZipFile(zfiledata) as data:
-		print data
 
-
-
-unzip_file(PP_fileLocation)
 #findAndReplace()
 
 
