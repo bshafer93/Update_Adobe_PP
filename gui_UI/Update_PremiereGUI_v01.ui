@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>394</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>391</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPlainTextEdit" name="Instructions">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>371</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="plainText">
+        <string>1. Save and version up your Premiere Project
+2. Copy &amp; Paste project to new location
+3. Right-Click the .prproj &gt;  7zip &gt; Extract here
+4. You should now have a new file without any extension
+5. Put that file in a folder seperate from the .prproj
+6. Copy file location and paste into program
+7. Run Program
+8. Add the .prproj file extension to the file you just processed
+9. You should now have a updated Premiere Project :)</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="fileLocation">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>331</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Copy Premiere Project file here</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="UpdateBtn">
+       <property name="geometry">
+        <rect>
+         <x>8</x>
+         <y>190</y>
+         <width>371</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Update Project File</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="selectFile">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>160</y>
+         <width>31</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../Folder-icon.png</normaloff>../../Folder-icon.png</iconset>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>verticalLayoutWidget</zorder>
+  <zorder>UpdateBtn</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

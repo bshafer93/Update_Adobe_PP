@@ -7,6 +7,8 @@ import os
 import glob
 import zipfile
 import StringIO
+import Update_PremiereGUI_v01
+
 #reg find version number
 			#(\d+).mov$
 			# Full match	0-22	`008.mov`
@@ -28,13 +30,14 @@ import StringIO
 			# Group 4.	14-18	`0010`
 
 #Constant Variables
-ProResFileLocations = "R:\Cox\Final_Renders\Cox_Cable\ProRes_4444_sRGB"
+
+ProResFileLocations = "R:\Cox\Final_Renders\Cox_Cable\ProRes_4444_Rec709"
 PP_fileLocation = raw_input("Drag and drop unzipped Premiere project here:")
 unzipLocation = "R:\IO Bullshit\VersionUpPriemere\COX\unzipped"
 
 
 def correct_VersionNames(shotName):
-	for name in glob.glob('R:\Cox\Final_Renders\Cox_Cable\ProRes_4444_sRGB\{0}*'.format(shotName)):
+	for name in glob.glob('R:\Cox\Final_Renders\Cox_Cable\ProRes_4444_Rec709\{0}*'.format(shotName)):
 		fullFileName = name
 		nameLen = len(fullFileName)
 		print fullFileName + "Is this long: " + str(nameLen)
@@ -90,11 +93,11 @@ def latestVersion(shotName):
 	versionList = []
 	sorting_dic = {}
 	#Sanitize names
-	for name in glob.glob('R:\Cox\Final_Renders\Cox_Cable\ProRes_4444_sRGB\{0}*'.format(shotName)):
+	for name in glob.glob('R:\Cox\Final_Renders\Cox_Cable\ProRes_4444_Rec709\{0}*'.format(shotName)):
 		correct_VersionNames(shotName)
 
 	#Create dic for sorting
-	for name in glob.glob('R:\Cox\Final_Renders\Cox_Cable\ProRes_4444_sRGB\{0}*'.format(shotName)):
+	for name in glob.glob('R:\Cox\Final_Renders\Cox_Cable\ProRes_4444_Rec709\{0}*'.format(shotName)):
 		# Getfilename only
 		versionNumber = re.search(r'(\d+).mov$',name).group(1)
 		print versionNumber
@@ -117,7 +120,7 @@ def insert_0(string, index):
 
 
 
-#findAndReplace()
+findAndReplace()
 
 
 
